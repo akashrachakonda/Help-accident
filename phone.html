@@ -1,0 +1,83 @@
+<html>
+<head>					
+<style>
+body{
+background-image:url('9.jpg');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+//filter:blur(2px);
+opacity:2px;
+}
+.round{
+border-radius:30px;
+-webkit-border-radius:15px;
+font-size:px;
+width:250px;
+height:200px;
+background-color:#909090;
+margin-top:180px;
+margin-left:500px;
+padding-top:10px;
+padding-right:10px;
+padding-left:50px;
+}
+.round input[type="submit"]{
+padding:10px;
+width:200px;
+height:40px;
+border-radius:5px;
+margin:0px;
+}
+
+.round input[type="text"]{
+width:200px;
+padding:10px;
+height:30px;
+border-radius:5px;
+margin:3px;
+}
+
+.round input[type="password"]{
+width:200px;
+padding:10px;
+height:30px;
+border-radius:5px;
+margin:3px;	
+}	
+</style>
+<script>
+function validation()
+{
+var y=document.forms["My"]["ph1"].value;
+var z=document.forms["My"]["ph2"].value;
+if(y=="")
+{
+alert("ph1 must be filled ");
+return false;
+}
+if(z=="")
+{
+alert("ph2 must be filled ");
+return false;
+}
+}
+</script>
+<h1 align="center" >PhoneNos for msg alerts...</h1>
+<title>Provide phonenos</title>
+</head>
+<body>
+<div class="round">
+<!--<h1>Sign In </h1>-->
+<form name="My" action="phone.php" onsubmit="return validation()" method="post" target="_blank">
+<label for="ph1"><b></b></label>
+PhoneNo 1:<input type="text" name="ph1" id="ph1" placeholder=" Enter u r PhoneNo:1"><br>
+<label for="ph2"><b></b></label>
+PhoneNo 2:<br><input type="text" name="ph2" id="ph2" placeholder="Enter u r phoneNo:2"><br>
+<br><input type="submit" value="submit"><br>
+</form>
+<script src="script.js"></script>
+</body>
+</html>
+
+

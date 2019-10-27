@@ -1,0 +1,127 @@
+<?php
+include("home2.html")
+<html>
+<head>
+<title>Registration</title>					
+<style>
+body{
+background-image:url('');
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:cover;
+//filter:blur(2px);
+opacity:2px;
+}
+.round{
+border-radius:30px;
+-webkit-border-radius:15px;
+font-size:px;
+width:270px;
+height:240px;
+background-color:#909090;
+margin-top:180px;
+margin-left:500px;
+padding-top:10px;
+padding-right:10px;
+padding-left:50px;
+}
+.round input[type="text"]{
+autofocus:yes;
+padding:10px;
+width:200px;
+height:30px;
+border-radius:5px;
+margin:3px;
+}
+.button
+{
+padding:10px;
+width:200px;
+height:40px;
+border-radius:5px;
+margin:0px;
+}
+.round input[type="submit"]{
+padding:10px;
+width:200px;
+height:40px;
+border-radius:5px;
+margin:0px;
+}
+
+.round input[type="number"]{
+width:200px;
+padding:10px;
+height:30px;
+border-radius:5px;
+margin:3px;
+}
+
+.round input[type="password"]{
+width:200px;
+padding:10px;
+height:30px;
+border-radius:5px;
+margin:3px;
+}
+</style>
+<script>
+function validation()
+{
+var x=document.forms["My"]["vehicleno"].value;
+var y=document.forms["My"]["Name"].value;
+var z=document.forms["My"]["number"].value;
+if(x==""&&y==""&&z=="")
+{
+alert("Page must be filled");
+return false;
+}
+if(x=="")
+{
+alert("vehicleNo must be filled");
+return false;
+}
+/*if(!isNaN(x))
+{
+alert("vehicleNo must be in Alphabets");
+return false;
+}*/
+if(y=="")
+{
+alert("Vehicleowner Name must be filled");
+return false;
+}
+if(isNaN(y))
+{
+window.alert("ChassisNo must be filled with Numbers");
+return false;
+}
+if(z=="")
+{
+alert("PhoneNo  must be filled");
+return false;
+}
+if(z.length<12||z.length>12)
+{
+alert("PhoneNo must be 12 numbers");
+return false;
+}
+}
+</script>
+<h1 align="center">Registration form</h1>
+</head>
+<body>
+<div class="round">
+<!--<h1>Sign In </h1>-->
+<form name="My" action="register.php" onsubmit="return validation()" method="post" target="_blank">
+<label for="vehicleNo"><b>VehicleNo:</b></label><br>
+<input type="text" name="vehicleno" id="vehicleno" placeholder=" Enter u r vehicleNo"><br>
+<label for="Name"><b></b></label>
+<b>ChassisNo:</b><br><input type="text" name="Name" id="Name" placeholder="Enter last5 digits of chassisNo"><br>
+<label for="number"><b></b></label>
+<b>PhoneNo:</b><br><input type="number" name="number" id="number" placeholder="Enter u r phoneNo with +91" ><br>
+<br><input type="submit" value="Register">
+</form>
+</body>
+</html>
+?>
